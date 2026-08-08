@@ -15,7 +15,7 @@
     <key>provisioningProfiles</key>
     <dict>
         <key>dk.carin.iostest</key>
-        <string>Carin iOS Test App Store</string>
+        <string>Carin_iOS_Test_App_Store</string>
     </dict>
 
     <key>stripSwiftSymbols</key>
