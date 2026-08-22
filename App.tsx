@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import {
   SafeAreaView,
   StatusBar,
@@ -8,8 +8,32 @@ import {
   View,
 } from 'react-native';
 
+const SPLASH_DURATION_MS = 2000;
+
 function App(): React.JSX.Element {
   const [count, setCount] = useState(0);
+  const [showSplash, setShowSplash] = useState(true);
+
+  useEffect(() => {
+    const timeoutId = setTimeout(() => {
+      setShowSplash(false);
+    }, SPLASH_DURATION_MS);
+
+    return () => clearTimeout(timeoutId);
+  }, []);
+
+  if (showSplash) {
+    return (
+      <SafeAreaView style={styles.splashScreen}>
+        <StatusBar barStyle="light-content" />
+        <View testID="splash-screen" style={styles.splashContent}>
+          <Text style={styles.splashIcon}>🚗</Text>
+          <Text style={styles.splashTitle}>TriMiLo</Text>
+          <Text style={styles.splashSubtitle}>Mileage logbook</Text>
+        </View>
+      </SafeAreaView>
+    );
+  }
 
   return (
     <SafeAreaView style={styles.screen}>
@@ -45,6 +69,32 @@ function App(): React.JSX.Element {
 }
 
 const styles = StyleSheet.create({
+  splashScreen: {
+    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center',
+    backgroundColor: '#1E3A8A',
+  },
+  splashContent: {
+    alignItems: 'center',
+    justifyContent: 'center',
+    paddingHorizontal: 24,
+  },
+  splashIcon: {
+    fontSize: 72,
+    marginBottom: 18,
+  },
+  splashTitle: {
+    color: '#ffffff',
+    fontSize: 32,
+    fontWeight: '700',
+    letterSpacing: 1,
+  },
+  splashSubtitle: {
+    color: '#BFD9FF',
+    fontSize: 16,
+    marginTop: 10,
+  },
   screen: {
     flex: 1,
     justifyContent: 'center',
