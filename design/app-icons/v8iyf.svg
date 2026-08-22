@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <rect width="512" height="512" rx="96" fill="#1E3A8A"/>
+  
+  <!-- Map shape -->
+  <path d="M75 175 Q175 95 256 155 Q340 215 435 135 V385 Q340 305 256 345 Q155 395 75 325 Z" fill="#1E40AF"/>
+  
+  <!-- Route -->
+  <path d="M105 285 C175 205 215 325 295 245 C355 185 400 285 425 225" 
+        fill="none" stroke="#60A5FA" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"/>
+  
+  <!-- Pins -->
+  <circle cx="105" cy="285" r="22" fill="#BFDBFE"/>
+  <circle cx="105" cy="285" r="10" fill="#1E3A8A"/>
+  <circle cx="425" cy="225" r="22" fill="#93C5FD"/>
+  <circle cx="425" cy="225" r="10" fill="#1E3A8A"/>
+  
+  <!-- Car -->
+  <g transform="translate(275,235) rotate(-20)">
+    <rect x="-32" y="-15" width="64" height="30" rx="9" fill="#EFF6FF"/>
+    <path d="M-16 -15 L-5 -30 H16 L27 -15 Z" fill="#DBEAFE"/>
+    <circle cx="-16" cy="17" r="10" fill="#1E3A8A"/>
+    <circle cx="16" cy="17" r="10" fill="#1E3A8A"/>
+  </g>
+  
+  <!-- Badge -->
+  <rect x="185" y="385" width="142" height="50" rx="25" fill="#3B82F6"/>
+  <text x="256" y="418" text-anchor="middle" font-family="system-ui, sans-serif" font-size="22" font-weight="700" fill="#EFF6FF">LOG</text>
+</svg>

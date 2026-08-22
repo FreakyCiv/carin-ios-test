@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <defs>
+    <linearGradient id="bg16" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#1E3A8A"/>
+      <stop offset="1" stop-color="#3B82F6"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="512" height="512" rx="104" fill="url(#bg16)"/>
+
+  <!-- three overlapping folders: personal / professional / company -->
+  <path d="M110 220 L200 220 L216 244 L300 244 L300 366 L110 366 Z" fill="#93C5FD"/>
+  <path d="M156 244 L246 244 L262 268 L346 268 L346 386 L156 386 Z" fill="#60A5FA"/>
+  <path d="M202 268 L292 268 L308 292 L392 292 L392 406 L202 406 Z" fill="#F8FAFC"/>
+
+  <!-- small car mark on front folder -->
+  <g transform="translate(297,350)">
+    <rect x="-40" y="-6" width="80" height="20" rx="10" fill="#1D4ED8"/>
+    <path d="M-26 -6 L-16 -22 C-12 -28 -6 -30 0 -30 L2 -30 C8 -30 14 -28 18 -22 L28 -6 Z" fill="#1D4ED8"/>
+    <circle cx="-18" cy="16" r="9" fill="#1E3A8A"/>
+    <circle cx="18" cy="16" r="9" fill="#1E3A8A"/>
+  </g>
+</svg>
